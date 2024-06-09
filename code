@@ -1,0 +1,53 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main(){
+  runApp(const list());
+
+}
+class list extends StatelessWidget {
+  const list({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final List<String> MyName = <String> ["c","C++","PHP","Android","iOS","c","C++","PHP","Android","iOS",];
+
+
+    return MaterialApp(
+     // theme: ThemeData.dark(),
+      home: Scaffold(
+
+
+        appBar: AppBar(
+            title: Text('WHATSAPP'),
+
+            backgroundColor: Colors.green,
+            leading: IconButton(
+              icon: Icon(Icons.message),
+              tooltip: 'Menu',
+              onPressed: () {},
+            ),
+        ),
+        body:
+        ListView.builder
+
+          (itemBuilder: (context, index) {
+          return ListTile(
+            leading: CircleAvatar(
+              backgroundImage: NetworkImage(
+                  "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIADYAXAMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAAEBQMGAAECB//EADUQAAIBAwMCBAMFCAMAAAAAAAECAwAEERIhMQVBEyJRYQYUcTJCgbHwByNSkaHB0eEkM0P/xAAZAQADAQEBAAAAAAAAAAAAAAACAwQBAAX/xAAeEQACAgIDAQEAAAAAAAAAAAAAAQIRITEDEkEiMv/aAAwDAQACEQMRAD8AcRyebzHbPaiI7bDF1IzyRS6JwcLjGBknvRtqxOfMfWvOygIZYxiDaQdOwrqSeTUqlMr3aohcvAxLqoJIAx6VoXrhtLFD7+lYUYWDTzQyE5LLjZSa7WWOPDh+exoK5uhI2wXI2GKDa6d11aCMHg1tJgOXVjpnhlIJJDChru9s7Fysk41clFUs2PoKW3PUVt7CWfw9kUlm9PSqTbXbzXbTyK8rjzkc/wA6OEL2Ng2z0OzuLDqpcQSnWNgrrpb+RrpIEglGBnGxFeem/wDlZPmY5mG+WOcEH1q92V+t1ZRys2HbfUvrWThWgnFM7uYo3iwpGD2xS42IBwIhjtTZtEgxKwUn7w2rnwdOy3GoeuKFWhb414J5VIlVoSc6cGirWeSNWXIwQRQccyYBViOxGOaKAbSHVgPb1rck7VMmnmJRGP3fQ8UBLdBTqgJLcEHiiA6sugjBYUJLZ6y5UsGztntXI2+x2mXtLmRnKyIV0DjnmoYnuIRqcOyuRk+oo1AJI0jnxkb54qXwPHbSXDHGRiusYoij40na16DoXAW5YYwew3/PFQfAdxGbCbwrYSz+ZnGOQDj0+m1Lf2gTP81DZn/yhzj3J/1Qfwd1+fpl8bNMZdv3TnAG+MqSQcU2K+CmFKVHokvw30vq3SJJms/l5iMqVBTPr5c/Xmqj8IXkcyXFnA6yhWZoWAIDKD2z7YxV3gupjavAWBldTwc6Aa8l6PJL0frONLAQyngds4P961fSNmqZfzLIMo5GPeiopkKfbK+2Khv3jfS4wyuoYMOCKXkzKSPExSqJZNxZEvUo2l0sCWAwCfyokXQaTSpGwzzSS5jJnj8P/rRcAL6963aOHCzFt86QvfNH19FSVljXS+NYwQNmqVldwGRctjGBzQcUn7sZOO2/NMYxGofS222MdjS2dBAkt0WKqR5Sdx6+1alm8JVdQw0/0qY2omw5KgjPBoDrZe06TdSHOVUgEnudq5DI2pFI65eve389y/330j2AoTwmkmGjbYEketaKtJNEnO+o/Qb/AK+tPLKywmpx3qh4RZxx7Md2fxBep05beKKGOXTpM6g6vwHAPvVh6V0ew+JrFTGBb9RtFCsE2DDgMP1zVStNOvHvg0/6Tdv0m+hvY9/DPnAONSnkfr2pfankofFccbJI4pIJZul3yGO6jUvHn7Mq8kj8P6j3rBpQaXiVyO5q3dZt4evWkV903DXNvpntzxrGASh+oOKplvPC6EyRuDqIxwfx96GarR5/N4yM248YgHAZSdh34pX8rol5GQS+w9KysookibD4CoVdQLAnccfrmmFuqMjqwJVjt6it1lDIPjeTcUWFKRHGDjeqv8XXDEJZ7hQ/mwea1WVkP0PitFfhPhGaXk/ZX27/AOKeQyaQM5wR2rKymSLuHRFNcKjZQNkUdbdQlMYV8EYyNqysoWPTLr+zu/ee0VSMY/KlvWLaGPrPUE84/wCS7bH+I6v71lZWvRDypN5P/9k="),
+            ),
+            title: Text('${MyName[index]}'),
+            trailing: Icon(Icons.message),
+            onTap: () {},
+          );
+        },
+          itemCount: MyName.length,
+        ),
+      ),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+
